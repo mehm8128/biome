@@ -1545,6 +1545,10 @@ export interface Nursery {
 	 */
 	noMissingVarFunction?: RuleConfiguration_for_Null;
 	/**
+	 * Succinct description of the rule.
+	 */
+	noNestedComponentDefinitions?: RuleConfiguration_for_Null;
+	/**
 	 * Disallow nested ternary expressions.
 	 */
 	noNestedTernary?: RuleConfiguration_for_Null;
@@ -3323,6 +3327,7 @@ export type Category =
 	| "lint/nursery/noIrregularWhitespace"
 	| "lint/nursery/noMissingGenericFamilyKeyword"
 	| "lint/nursery/noMissingVarFunction"
+	| "lint/nursery/noNestedComponentDefinitions"
 	| "lint/nursery/noNestedTernary"
 	| "lint/nursery/noNoninteractiveElementInteractions"
 	| "lint/nursery/noOctalEscape"

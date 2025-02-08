@@ -162,6 +162,7 @@ define_categories! {
     "lint/nursery/noIrregularWhitespace": "https://biomejs.dev/linter/rules/no-irregular-whitespace",
     "lint/nursery/noMissingGenericFamilyKeyword": "https://biomejs.dev/linter/rules/no-missing-generic-family-keyword",
     "lint/nursery/noMissingVarFunction": "https://biomejs.dev/linter/rules/no-missing-var-function",
+    "lint/nursery/noNestedComponentDefinitions": "https://biomejs.dev/linter/rules/no-nested-component-definitions",
     "lint/nursery/noNestedTernary": "https://biomejs.dev/linter/rules/no-nested-ternary",
     "lint/nursery/noNoninteractiveElementInteractions": "https://biomejs.dev/linter/rules/no-noninteractive-element-interactions",
     "lint/nursery/noOctalEscape": "https://biomejs.dev/linter/rules/no-octal-escape",

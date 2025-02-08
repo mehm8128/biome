@@ -198,25 +198,25 @@ mod tests {
 
     use super::*;
 
-    // #[ignore]
     #[test]
     fn quick_test() {
         const SOURCE: &str = r#"
+class ParentComponent extends React.Component {
+          render() {
+            const List = () => {
+              return <ul>item</ul>;
+            };
 
-        /**
-* biome-ignore lint/style/useConst: reason
- */
-
-
-let foo = 2;
-let bar = 33;
-        "#;
+            return <List {...this.props} />;
+          }
+        }
+"#;
 
         let parsed = parse(SOURCE, JsFileSource::tsx(), JsParserOptions::default());
 
         let mut error_ranges: Vec<TextRange> = Vec::new();
         let options = AnalyzerOptions::default();
-        let rule_filter = RuleFilter::Rule("style", "useConst");
+        let rule_filter = RuleFilter::Rule("nursery", "noNestedComponentDefinitions");
 
         let mut dependencies = Dependencies::default();
         dependencies.add("buffer", "latest");
@@ -260,6 +260,7 @@ let bar = 33;
         // assert_eq!(error_ranges.as_slice(), &[]);
     }
 
+    #[ignore]
     #[test]
     fn quick_test_suppression() {
         const SOURCE: &str = "

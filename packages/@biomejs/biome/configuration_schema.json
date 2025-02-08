@@ -2614,6 +2614,13 @@
 						{ "type": "null" }
 					]
 				},
+				"noNestedComponentDefinitions": {
+					"description": "Succinct description of the rule.",
+					"anyOf": [
+						{ "$ref": "#/definitions/RuleConfiguration" },
+						{ "type": "null" }
+					]
+				},
 				"noNestedTernary": {
 					"description": "Disallow nested ternary expressions.",
 					"anyOf": [
